@@ -6,11 +6,9 @@ $server_key = "SB-Mid-server-QL7x_5hvHaGyghMK_mwqZ3lB";
 // variabel environment production 
 $is_production = false;
 
-if ($is_production){
-    $api_url = "https://app.midtrans.com/snap/v1/transactions";
-} else {
-    $api_url = "https://app.sandbox.midtrans.com/snap/v1/transactions";
-}
+$api_url = $is_production ? 
+  'https://app.midtrans.com/snap/v1/transactions' : 
+  'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
 
 // jika url yg diminta tidak ada tulisan '/charge'
